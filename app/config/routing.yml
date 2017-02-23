@@ -1,0 +1,4 @@
+nao_core:
+    resource: "@NAOCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

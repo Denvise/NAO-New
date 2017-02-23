@@ -1,0 +1,37 @@
+nao_core_home:
+    path: /
+    defaults: { _controller: NAOCoreBundle:Core:index }
+
+nao_core_observation:
+    path: /observation
+    defaults: { _controller: NAOCoreBundle:Core:observation }
+
+nao_core_about:
+    path: /about
+    defaults: { _controller: NAOCoreBundle:Core:about }
+
+nao_core_contact:
+    path: /contact
+    defaults: { _controller: NAOCoreBundle:Core:contact }
+
+nao_core_login:
+    path: /login
+    defaults: { _controller: NAOCoreBundle:User:login }
+
+nao_core_login_check:
+    path: /login_check
+
+nao_core_logout:
+    path: /logout
+
+nao_core_password:
+    path: /password
+    defaults: { _controller: NAOCoreBundle:User:password }
+
+nao_core_register:
+    path: /register
+    defaults: { _controller: NAOCoreBundle:User:register }
+
+nao_core_account:
+    path: /account
+    defaults: { _controller: NAOCoreBundle:User:account }

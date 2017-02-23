@@ -1,0 +1,39 @@
+{% extends "NAOCoreBundle::layout.html.twig" %}
+
+{% block banner_h2 %}A propos{% endblock %}
+{% block banner_desc %}Qu'est ce que NAO ?{% endblock %}
+
+{% block center_column %}
+    <div class="container">
+        <div id="ColumnLeftContact" class="col-md-offset-2 col-md-8">
+            <h4 class="row">A Propos de NAO</h4>
+            <div class="desc">
+                <span class="infoMail"><i class="fa fa-user mailto" aria-hidden="true"></i> Fondateur :</span>
+                <br/>
+                <br/>
+                <p class="small">Michel Dujardin est le fondateur de l’association NAO (Nos Amis les Oiseaux), regroupant les passionnés d’ornithologie.<br/></p>
+                Passionné par les oiseaux depuis son plus jeune âge il décide de monter cette association en 1997.</p>
+            </div>
+
+            <div class="desc">
+                <span class="infoMail"> <i class="fa fa-calendar-minus-o mailto" aria-hidden="true"></i> Exposition :</span>
+                <br/>
+                <br/>
+                <p class="small">C'est en 2001 que l'association NAO présenta sa première exposition entièrement consacré
+                aux moineaux. Le déclin de ces oiseaux pourtant très présent, fut un sujet capital à abordé pour NAO.</p>
+                <p>Sensibiliser les générations futures est une des missions prinicipale de l'association.</p>
+                <br/>
+            </div>
+
+            <div class="desc">
+                <span class="infoMail"><i class="fa fa-leaf mailto" aria-hidden="true"></i> Ecologie</span>
+                <br/>
+                <br/>
+                <p class="small">Il ne peut y avoir de vie sans un eco-système végétal, c'est pourquoi NAO participe aux
+                    campagnes écologique. Les gestes anodins permettent de sauver la végétation et ainsi préserver la biodiversité.</p>
+                <p>L'ornithologie est une passion mais également un combat, sans prise de conscience collective, sur le respect de la nature, notre ciel sera seulement une toile teinté de bleu.</p>
+                <br/>
+            </div>
+        </div>
+    </div>
+{% endblock %}

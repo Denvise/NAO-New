@@ -1,0 +1,42 @@
+{% extends "NAOCoreBundle::layout.html.twig" %}
+
+{% block banner_h2 %}Contacter nous{% endblock %}
+{% block banner_desc %}Une question, un souci techniques ?{% endblock %}
+
+{% block center_column %}
+<div class="container">
+    <div id="ColumnLeftContact" class="col-md-offset-2 col-md-8">
+        <h4 class="row">Pour nous contacter</h4>
+        <div class="desc">
+            <span class="infoMail"><i class="fa fa-envelope mailto" aria-hidden="true"></i> Par mail :</span>
+            <br/>
+            <br/>
+            <p>Pour toutes informations liés à l'ornithologie veuillez contactez :<br/>
+                 <a href="mailto:contact@nao.com">contact@nao.com</a></p>
+            <br/>
+            <p>En cas de problème lié à l'utilisation du site veuillez contactez le service technique :<br/>
+                <a href="mailto:techniques@nao.com">techniquest@nao.com</a></p><br/>
+        </div>
+
+        <div class="desc">
+            <span class="infoMail"> <i class="fa fa-phone-square mailto" aria-hidden="true"></i> Par téléphone :</span>
+            <br/>
+            <br/>
+            <p><span class="italic">Du lundi au vendredi de 10h - 17h30</span></p>
+            <p>N° 09 09 09 09 09</p>
+            <br/>
+        </div>
+
+        <div class="desc">
+            <span class="infoMail"><i class="fa fa-map-marker mailto" aria-hidden="true"></i> Nous rencontrer :</span>
+            <br/>
+            <br/>
+            <p><span class="italic">Du lundi au samedi de 9h30 - 18h</span></p>
+            <p>Fondation NAO</p>
+            <p>10 rue des Macadamias</p>
+            <p>76000 Rouen</p>
+            <br/>
+        </div>
+    </div>
+</div>
+{% endblock %}

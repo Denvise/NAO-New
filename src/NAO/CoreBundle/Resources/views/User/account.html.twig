@@ -1,0 +1,176 @@
+{% extends "NAOCoreBundle::layout.html.twig" %}
+
+{% block banner_h2 %}Titre de la page account{% endblock %}
+{% block banner_desc %}Description de la page account{% endblock %}
+
+{% block center_column %}
+
+    <div class="container">
+        <div class="titleCat">
+            <h2>Mes observations</h2>
+        </div>
+            <div class="container">
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/bernachecravant.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <h4>#1 Bernache cravant</h4>
+                        <p>Date : 21/01/16</p>
+                        <p>Latitude : 48.4167</p>
+                        <p>Longitude :  -1.7524</p>
+                    </div>
+                </div>
+
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <h4>#2 Barge rousse</h4>
+                        <tp>Date : 21/01/16</tp>
+                        <p>Latitude : 48.4167</p>
+                        <p>Longitude :  -1.7524</p>
+                    </div>
+                </div>
+
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <h4>#3 Aigle criard</h4>
+                        <p>Date : 21/01/16</p>
+                        <p>Latitude : 48.4167</p>
+                        <p>Longitude :  -1.7524</p>
+                    </div>
+                </div>
+
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <h4>#3 Aigle criard</h4>
+                        <p>Date : 21/01/16</p>
+                        <p>Latitude : 48.4167</p>
+                        <p>Longitude :  -1.7524</p>
+                    </div>
+                </div>
+            </div>
+        <div class="container">
+            <div class="titleCat">
+                    <h2>Observations en attente de validation</h2>
+            </div>
+            <div class="block col-md-3">
+                <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                <div class="description">
+                    <h4>#3 Aigle criard</h4>
+                    <p>Date : 21/01/16</p>
+                    <p>Latitude : 48.4167</p>
+                    <p>Longitude :  -1.7524</p>
+                </div>
+                <div class="addObs">
+                    <button type="button" class="btn btn-success buttonLeft">Success</button>
+                    <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                </div>
+            </div>
+
+            <div class="block col-md-3">
+                <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                <div class="description">
+                    <h4>#3 Aigle criard</h4>
+                    <p>Date : 21/01/16</p>
+                    <p>Latitude : 48.4167</p>
+                    <p>Longitude :  -1.7524</p>
+                </div>
+                 <div class="addObs">
+                    <button type="button" class="btn btn-success buttonLeft">Success</button>
+                    <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                </div>
+            </div>
+
+            <div class="block col-md-3">
+                <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                <div class="description">
+                    <h4>#3 Aigle criard</h4>
+                    <p>Date : 21/01/16</p>
+                    <p>Latitude : 48.4167</p>
+                    <p>Longitude :  -1.7524</p>
+                </div>
+                 <div class="addObs">
+                    <button type="button" class="btn btn-success buttonLeft">Success</button>
+                    <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                </div>
+            </div>
+
+            <div class="block col-md-3">
+                <img src="{{ asset('bundles/naocore/images/imagenone.jpg') }}" style="max-width:100%;"/>
+                <div class="description">
+                    <h4>#3 Aigle criard</h4>
+                    <p>Date : 21/01/16</p>
+                    <p>Latitude : 48.4167</p>
+                    <p>Longitude :  -1.7524</p>
+                </div>
+                <div class="addObs">
+                    <button type="button" class="btn btn-success buttonLeft">Success</button>
+                    <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container">
+                <div class="titleCat">
+                    <h2>Utilisateurs en attente de validation</h2>
+                </div>
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/adduser.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <p>Didier</p>
+                        <p>Herblon</p>
+                        <p>Naturaliste</p>
+                    </div>
+                    <div class="addObs">
+                        <button type="button" class="btn btn-success buttonLeft">Success</button>
+                        <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                    </div>
+                </div>
+
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/adduser.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <p>Yvonne</p>
+                        <p>Vava</p>
+                        <p>Naturaliste</p>
+                    </div>
+                    <div class="addObs">
+                        <button type="button" class="btn btn-success buttonLeft">Success</button>
+                        <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                    </div>
+                </div>
+
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/adduser.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <p>Patrick</p>
+                        <p>None</p>
+                        <p>Naturaliste</p>
+                    </div>
+                    <div class="addObs">
+                        <button type="button" class="btn btn-success buttonLeft">Success</button>
+                        <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                    </div>
+                </div>
+
+                <div class="block col-md-3">
+                    <img src="{{ asset('bundles/naocore/images/adduser.jpg') }}" style="max-width:100%;"/>
+                    <div class="description">
+                        <p>Lilo</p>
+                        <p>Stitch</p>
+                        <p>Naturaliste</p>
+                    </div>
+                    <div class="addObs">
+                        <button type="button" class="btn btn-success buttonLeft">Success</button>
+                        <button type="button" class="btn btn-warning buttonRight">Warning</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "NAOCoreBundle::layout.html.twig" %}
+
+{% block banner_h2 %}Observations{% endblock %}
+{% block banner_desc %}Ajouter une nouvelle observation{% endblock %}
+
+{% block center_column %}
+	<div class="form">
+		<h2 class="titleObservation row">Nouvelle observation</h2>
+		{{ form_start(form) }}
+			{{ form_errors(form) }}
+			{{ form_row(form.species) }}
+			{{ form_row(form.date) }}
+			{{ form_row(form.latitude) }}
+			{{ form_row(form.longitude) }}
+			{{ form_row(form.image) }}
+			<div class="form-group">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-10">{{ form_widget(form.validate) }}</div>
+			</div>
+			{{ form_rest(form) }}
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

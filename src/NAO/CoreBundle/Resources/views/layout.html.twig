@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}Association NAO{% endblock %}</title>
+		{% block stylesheets %}
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
+			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+			<link rel="stylesheet" href="{{ asset('bundles/naocore/css/style.css') }}">
+			<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        {% endblock %}
+	</head>
+
+	<body>
+		<header id="header_container" class="clearfix">
+			<div id="header_top" class="clearfix">
+				<div class="container">
+					<div class="Log col-md-offset-8 col-md-4">
+						{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+							{{ app.user.username }}
+						{% endif %}
+							<a href="{{ path('nao_core_account') }}">Mon compte</a>
+						{% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+							<a href="{{ path('nao_core_login') }}">Connexion</a>
+						{% else %}
+							<a href="{{ path('nao_core_logout') }}">Déconnexion</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			<div id="header" class="clearfix">
+				<div class="container">
+					<a href="{{ path('nao_core_home') }}" title="Association NAO"><img src="{{ asset('bundles/naocore/images/logo.png') }}" class="logo" alt="Logo association NAO" /></a>
+					<h1>Association NAO</h1>
+				</div>
+			</div>
+			<div id="menu" class="clearfix">
+				<div class="container">
+					<div class="links">
+						<a href="{{ path('nao_core_home') }}">Accueil</a>
+						<a href="{{ path('nao_core_observation') }}">Saisir une observation</a>
+						<a href="{{ path('nao_core_about') }}">A propos</a>
+						<a href="{{ path('nao_core_contact') }}">Contact</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section id="page" class="clearfix">
+			<div id="banner">
+				<div class="container">
+					<h2>{% block banner_h2 %}{% endblock %}</h2>
+					<p>{% block banner_desc %}{% endblock %}</p>
+				</div>
+			</div>
+			<div id="center_column">
+				<div class="container">
+					{% block center_column %}{% endblock %}
+				</div>
+			</div>
+		</section>
+
+		<div class="prefooter">
+			<center><img src="{{ asset('bundles/naocore/images/picfooter.png') }}"/></center>
+		</div>
+		<footer id="footer" class="clearfix">
+			<div class="container">
+				<div class="row">
+					<div id="footer_left" class="col-sm-5">
+						<p>Association NAO © 2017 Tous droits réservés</p>
+					</div>
+					<div id="footer_right" class="col-sm-7">
+						<a href="#" target="_blank" title="Visiter la page de l'association sur Facebook"><img src="{{ asset('bundles/naocore/images/facebook.png') }}" alt="Icone Facebook" width="30px"/></a>
+						<a href="#" target="_blank" title="Visiter la page de l'association sur Twitter"><img src="{{ asset('bundles/naocore/images/twitter.png') }}" alt="Icone Twitter" width="30px"/></a>
+						<a href="#" target="_blank" title="Visiter la page de l'association sur Youtube"><img src="{{ asset('bundles/naocore/images/youtube.png') }}" alt="Icone Youtube" width="30px"/></a>
+						<a href="#" target="_blank" title="Visiter la page de l'association sur Instagram"><img src="{{ asset('bundles/naocore/images/instagram.png') }}" alt="Icone Instagram" width="30px"/></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		{% block javascripts %}
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		{% endblock %}
+	</body>
+</html>

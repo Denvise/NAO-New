@@ -1,0 +1,47 @@
+{% extends "NAOCoreBundle::layout.html.twig" %}
+
+{% block banner_h2 %}Bienvenue sur NAO{% endblock %}
+{% block banner_desc %}L'assocication pour les amoureux des oiseaux{% endblock %}
+
+{% block center_column %}
+	<div class="row">
+		<div class="col-md-4">
+
+			<h3>Rechercher une espèce</h3>
+			<div id="left_column" class="clearfix">
+				{{ form_start(form) }}
+					<div class="form-group container">{{ form_widget(form.species) }}</div>
+					<div class="form-group container center">{{ form_widget(form.validate, {'label': 'Rechercher', 'attr': {'class': 'btn btn-info'}}) }}</div>
+					{{ form_rest(form) }}
+				{{ form_end(form) }}
+
+				{% if speciesInfos %}
+					<div class="well">
+						{% for speciesInfo in speciesInfos %}
+							<h4>{{ speciesInfo.fullName }}</h4>
+							<h5 class="space">{{ speciesInfo.vernName }}</h5>
+							<p><span class="bold">Nom :</span> {{ speciesInfo.name }}</p>
+							<p class="space"><span class="bold">Rang :</span> {{ speciesInfo.rank }}</p>
+							<p class="space"><span class="bold">Ref :</span> <a href="https://inpn.mnhn.fr/espece/cd_nom/{{ speciesInfo.ref }}" target="_blank">{{ speciesInfo.ref }}</a></p>
+							<p><span class="bold">Phylum :</span> {{ speciesInfo.phylum }}</p>
+							<p><span class="bold">Classe :</span> {{ speciesInfo.classe }}</p>
+							<p><span class="bold">Ordre :</span> {{ speciesInfo.category }}</p>
+							<p class="space"><span class="bold">Famille :</span> {{ speciesInfo.family }}</p>
+							<p><span class="bold">Habitat :</span> {{ speciesInfo.habitat }}</p>
+						{% endfor %}
+					</div>
+				{% else %}
+					<div class="alert alert-info">
+						<p>Veuillez sélectionner une espèce dans la liste ci-dessus pour obtenir des informations complètes à propos de cette espèce.</p>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="col-md-8">
+			<h3>Zones d'observations des espèces</h3>
+			<div id="right_column" class="clearfix">
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

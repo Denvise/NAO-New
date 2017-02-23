@@ -1,0 +1,3 @@
+services:
+    nao_core.users:
+        class: NAO\CoreBundle\Services\Users

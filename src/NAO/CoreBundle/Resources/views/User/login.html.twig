@@ -1,0 +1,30 @@
+{% extends "NAOCoreBundle::layout.html.twig" %}
+
+{% block banner_h2 %}Titre de la page login{% endblock %}
+{% block banner_desc %}Description de la page login{% endblock %}
+
+{% block center_column %}
+	<div class="well">
+		{% if error %}
+		    <div class="alert alert-danger">{{ error.message }}</div>
+		{% endif %}
+		{{ form_start(form, {'action': path('nao_core_login_check')}) }}
+			{{ form_row(form.username, {'full_name': '_username', 'value' : last_username}) }}
+			{{ form_row(form.password, {'full_name': '_password'}) }}
+			<div class="form-group">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-10">
+					<a href="{{ path('nao_core_password') }}">Mot de passe oublié ?</a>
+				</div>
+			</div>
+			{{ form_row(form.validate, {'label': 'Se connecter', 'attr': {'class': 'btn btn-info'}}) }}
+			<div class="form-group">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-10">
+					<a href="{{ path('nao_core_register') }}">Pas de compte ? Créez-en un</a>
+				</div>
+			</div>
+			{{ form_rest(form) }}
+		{{ form_end(form) }}
+	</div>
+{% endblock %}
